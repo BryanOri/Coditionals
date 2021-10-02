@@ -12,6 +12,12 @@ if (7 < 10) {
 
 //take the original statement and make it false
 
+if (7 > 10) {
+    console.log (true);
+//this wiill only occur if the statement is false
+} else {
+    console.log(false);
+}
 
 //An if/else if/else statement adds a third code block for JavaScript to execute
 
@@ -32,14 +38,18 @@ function hobbies() {
 
     //create a variable for "newHobby"
     let newHobby;
+    let randomNum = Math.floor(Math.random()* 10);
 
     //Math.random randomly selects a number that fulfills these conditions: 0 < x < 1
     //Math.floor returns the largest integer less than or equal to a given number
-    if (Math.floor(Math.random()* 10) < 3) {
-        newHobby = true;
-        console.log(newHobby);
+    if (randomNum < 3) {
+        newHobby = `soccer`;
+        console.log("your new hobby is " + newHobby);
+    } else if (randomNum > 6){
+        newHobby = "archery"
+        console.log("your new hobby is " + newHobby);
     } else {
-        console.log(false);
+        console.log('you have no new hobby');
     }
 }
 
@@ -63,3 +73,16 @@ hobbies();
 //repeat for else
 
 //Don't forget to call your function
+function movieChoice(){
+    RandomNum = Math.floor(Math.random()* 3);
+
+    if (RandomNum === 1){
+        console.log("I will watch Toy Story");
+    } else if (RandomNum === 2){
+        console.log("I will watch The Lego Movie");
+    } else {
+        console.log("I will watch SpaceJam");
+    }
+};
+
+movieChoice();
